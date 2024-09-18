@@ -86,7 +86,7 @@ The method has a couple of optional parameters to search for the latest log item
 use App\Notifications\OrderSentNotification;
 
 $logItem = $user->latestLoggedNotification(
-    notificationType: OrderSentNotification::class, // search for a specific notification type
+    notificationTypes: OrderSentNotification::class, // search for a specific notification type
     before: $carbon, // we're looking for a notification before the given carbon instance
     after: $carbon, // we're looking for a notification after the given carbon instance
     fingerprint: 'dummy-fingerprint' // search for a log item with this fingerprint
